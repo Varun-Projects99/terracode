@@ -15,12 +15,16 @@ steps:
 
 - script: terraform init
   displayName: Terraform Init
+  workingDirectory: $(System.DefaultWorkingDirectory)/devops 1
 
 - script: terraform validate
   displayName: Terraform Validate
+  workingDirectory: $(System.DefaultWorkingDirectory)/devops 1
 
 - script: terraform plan
   displayName: Terraform Plan
+  workingDirectory: $(System.DefaultWorkingDirectory)/devops 1
 
 - script: terraform apply -auto-approve
   displayName: Terraform Apply
+  workingDirectory: $(System.DefaultWorkingDirectory)/devops 1
