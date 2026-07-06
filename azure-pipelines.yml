@@ -15,16 +15,16 @@ steps:
 
 - script: terraform init
   displayName: Terraform Init
-  workingDirectory: $(System.DefaultWorkingDirectory)/varun_project177
+  workingDirectory: $(System.DefaultWorkingDirectory)/devops 1
 
 - script: terraform validate
   displayName: Terraform Validate
-  workingDirectory: $(System.DefaultWorkingDirectory)/varun_project177
+  workingDirectory: $(System.DefaultWorkingDirectory)/devops 1
 
 - script: terraform plan
   displayName: Terraform Plan
-  workingDirectory: $(System.DefaultWorkingDirectory)/varun_project177
+  workingDirectory: $(System.DefaultWorkingDirectory)/devops 1
 
 - script: terraform apply -auto-approve
   displayName: Terraform Apply
-  workingDirectory: $(System.DefaultWorkingDirectory)/varun_project177
+  workingDirectory: $(System.DefaultWorkingDirectory)/devops 1
