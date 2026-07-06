@@ -14,14 +14,13 @@ steps:
   displayName: 'Install Terraform'
 
 - script: |
-    az login --service-principal \
-      -u $() \
-      -p $() \
-      --tenant $()
-
-    az account set --subscription $a2c117ee-0f8d-4f6d-891a-4fb37f0dd85e)
-
-    terraform init
+     az login --service-principal \
+      -u "YOUR_CLIENT_ID" \
+      -p "YOUR_CLIENT_SECRET" \
+      --tenant "YOUR_TENANT_ID"
+      az account set --subscription "a2c117ee-0f8d-4f6d-891a-4fb37f0dd85e"
+      
+      terraform init
   displayName: 'Terraform Init'
 
 - script: terraform validate
