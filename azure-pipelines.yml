@@ -15,14 +15,14 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)'
+
 
 - task: TerraformTask@5
   displayName: Terraform Validate
   inputs:
     provider: 'azurerm'
     command: 'validate'
-    workingDirectory: '$(System.DefaultWorkingDirectory)'
+
 
 - task: TerraformTask@5
   displayName: Terraform Plan
@@ -30,7 +30,7 @@ steps:
     provider: 'azurerm'
     command: 'plan'
     environmentServiceNameAzureRM: 'devops 1'
-    workingDirectory: '$(System.DefaultWorkingDirectory)'
+
 
 - task: TerraformTask@5
   displayName: Terraform Apply
@@ -39,4 +39,3 @@ steps:
     command: 'apply'
     environmentServiceNameAzureRM: 'devops 1'
     commandOptions: '-auto-approve'
-    workingDirectory: '$(System.DefaultWorkingDirectory)'
